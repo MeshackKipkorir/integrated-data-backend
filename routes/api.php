@@ -54,6 +54,9 @@ Route::get('latestJobs','JobsApi@latestJobs');
 //latest Tenders
 Route::get('latestTenders','tendersApi@latestTenders');
 
+//remove notification
+Route::get('deleteNotification/{id}/user/{email}','NotificationController@deleteNotification');
+
 //authentication url
 Route::group([
     'prefix' => 'auth'

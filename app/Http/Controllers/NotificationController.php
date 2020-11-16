@@ -26,4 +26,9 @@ class NotificationController extends Controller
     public function fetchUser($email){
         return user::where('email',$email)->get();
     }
+
+    public function  deleteNotification($id,$email){
+
+        return notification::where('id',$id)->where('email',$email)->delete();
+    }
 }
