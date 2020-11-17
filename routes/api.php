@@ -55,7 +55,10 @@ Route::get('latestJobs','JobsApi@latestJobs');
 Route::get('latestTenders','tendersApi@latestTenders');
 
 //remove notification
-Route::get('deleteFavorite/{id}/user/{email}','NotificationController@deleteNotification');
+Route::post('deleteFavorite/{id}/user/{email}','NotificationController@deleteNotification');
+
+//remove tender notification
+Route::post('deleteFavoriteTender/{id}/user/{email}','NotificationController@deleteTenderNotification');
 
 //authentication url
 Route::group([

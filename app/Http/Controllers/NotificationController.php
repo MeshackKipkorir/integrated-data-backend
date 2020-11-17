@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\notification;
 use App\User;
+use App\TenderNotification;
 
 class NotificationController extends Controller
 {
@@ -30,5 +31,9 @@ class NotificationController extends Controller
     public function  deleteNotification($id,$email){
 
         return notification::where('id',$id)->where('email',$email)->delete();
+    }
+
+    public function deleteTenderNotification($id,$email){
+        return TenderNotification::where('id',$id)->where('email',$email)->delete();
     }
 }
